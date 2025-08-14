@@ -1,0 +1,53 @@
+.about-container {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  background: #fef5e7;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #ff6f61;
+  margin-bottom: 1.5rem;
+}
+
+.author-section .author-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.author-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e67e22;
+}
+
+.author-text h3 {
+  font-size: 1.5rem;
+  color: #d35400;
+  margin-bottom: 0.5rem;
+}
+
+.author-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.contact-icons img {
+  width: 30px;   /* Adjust width as needed */
+  height: 28px;  /* Keep height same to maintain aspect ratio */
+  margin: 0 10px; /* Spacing between icons */
+  cursor: pointer; /* Optional: pointer on hover */
+  transition: transform 0.2s ease;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
