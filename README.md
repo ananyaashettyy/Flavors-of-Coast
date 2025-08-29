@@ -97,11 +97,11 @@ Admin Panel: **http://localhost:5173/admin** (Add & manage recipes)
 
 
 
-
+<img width="1892" height="814" alt="Screenshot 2025-08-29 195049" src="https://github.com/user-attachments/assets/6ebd90ec-d108-44be-8ca0-b59742ce90ba" />
 
 <img width="1857" height="849" alt="Screenshot 2025-08-29 195142" src="https://github.com/user-attachments/assets/2e642702-2d16-451f-bd7c-b7074d4b8633" />
 <img width="1888" height="848" alt="Screenshot 2025-08-29 195105" src="https://github.com/user-attachments/assets/2e3257e9-12e5-41a6-ac61-ed56459e77fa" />
-<img width="1892" height="814" alt="Screenshot 2025-08-29 195049" src="https://github.com/user-attachments/assets/6ebd90ec-d108-44be-8ca0-b59742ce90ba" />
+
 <img width="1860" height="935" alt="Screenshot 2025-08-29 201234" src="https://github.com/user-attachments/assets/6683446d-740e-42ff-85c0-9a83775d7477" />
 <img width="1650" height="777" alt="Screenshot 2025-08-29 195227" src="https://github.com/user-attachments/assets/f8901b7f-4f23-454d-81d9-66e3baa1394f" />
 <img width="1890" height="834" alt="Screenshot 2025-08-29 195218" src="https://github.com/user-attachments/assets/ddf2eca1-56be-42cb-8837-f1222f142e4f" />
