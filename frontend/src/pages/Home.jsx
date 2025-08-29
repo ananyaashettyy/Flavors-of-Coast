@@ -12,8 +12,8 @@ const Home = () => {
     <div className="home-container">
       <div className="hero">
         <div className="hero-text">
-          <h1>Welcome to <span>Cooking With Ananya</span></h1>
-          <p>Your go-to hub for mouthwatering recipes, curated with love.</p>
+          <h1>Karavali Kitchen</h1>
+          <p>Your go-to hub for authentic Udupi–Mangalore recipes, curated with tradition and love.</p>
           <button className="hero-btn" onClick={() => navigate('/recipes')}>Explore Recipes</button>
         </div>
         <div className="hero-image">
@@ -28,7 +28,7 @@ const Home = () => {
       <img src={everydaymeals} alt="Everyday Meals" />
       <div className="card-body">
         <h3>Everyday Meals</h3>
-        <p>Wholesome main courses and staples for breakfast, lunch, and dinner.</p>
+        <p>Wholesome coastal staples—rice, curries, sambar, and temple-style vegetarian delights for breakfast, lunch, and dinner.</p>
       </div>
     </div>
 
@@ -36,7 +36,7 @@ const Home = () => {
       <img src={sweettreat} alt="Sweet Treats" />
       <div className="card-body">
         <h3>Sweet Treats</h3>
-        <p>Desserts and indulgent delights to sweeten every occasion.</p>
+        <p>Authentic Udupi & Mangalore desserts like Kesari Bath, Payasa, Halwa, and Coastal Holige to sweeten every occasion.</p>
       </div>
     </div>
 
@@ -44,7 +44,7 @@ const Home = () => {
       <img src={quickbites} alt="Quick Bites" />
       <div className="card-body">
         <h3>Quick Bites</h3>
-        <p>Snacks, street food, and refreshing drinks for anytime cravings.</p>
+        <p>Crunchy snacks, street-style treats, and refreshing coastal drinks—from Goli Baje to Neer Dosa and more.</p>
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@ const Home = () => {
 
       <section className="cta-section">
         <h2>Ready to cook something amazing?</h2>
-        <p>Explore hundreds of recipes across all categories and skill levels.</p>
+        <p>Discover the rich flavors of Udupi and Mangalore cuisine—from coconut-rich curries to spicy seafood specialties.</p>
         <button className="hero-btn" onClick={() => navigate('/recipes')}>Browse All Recipes</button>
       </section>
     </div>

@@ -10,17 +10,13 @@ const Recipes = () => {
   const queryParams = new URLSearchParams(location.search);
   const searchQuery = queryParams.get("q")?.toLowerCase();
 
-  // Fetch recipes from backend
-  const fetchRecipes = () => {
+  // Fetch recipes
+  useEffect(() => {
     fetch("http://localhost:5000/api/recipes")
       .then((res) => res.json())
       .then((data) => setRecipes(data))
-      .catch((err) => console.error("Error fetching recipes:", err));
-  };
-
-  useEffect(() => {
-    fetchRecipes();
-  }, [location]); // re-fetch when URL changes (e.g. after adding a recipe)
+      .catch((err) => console.error(err));
+  }, [location]);
 
   const matchesSearch = (recipe) => {
     const nameMatch = recipe.name.toLowerCase().includes(searchQuery);
@@ -51,7 +47,6 @@ const Recipes = () => {
                 className="recipe-card"
                 onClick={() => navigate(`/recipe/${recipe.id}`)}
               >
-                {/* Veg/Non-Veg Dot */}
                 <span
                   className="veg-dot"
                   style={{
@@ -83,39 +78,68 @@ const Recipes = () => {
             .filter((recipe) => recipe.category === category)
             .sort((a, b) => a.name.localeCompare(b.name));
 
-          if (categoryRecipes.length === 0) return null;
+          if (!categoryRecipes.length) return null;
 
           return (
             <div key={category} className="category-section">
               <h2 className="category-title">{category}</h2>
-              <div className="category-recipes">
-                {categoryRecipes.map((recipe) => (
-                  <div
-                    key={recipe.id}
-                    className="recipe-card"
-                    onClick={() => navigate(`/recipe/${recipe.id}`)}
-                  >
-                    {/* Veg/Non-Veg Dot */}
-                    <span
-                      className="veg-dot"
-                      style={{
-                        backgroundColor:
-                          recipe.type?.toLowerCase() === "veg" ? "green" : "red",
-                      }}
-                    ></span>
 
-                    <img
-                      src={
-                        recipe.image.startsWith("/uploads")
-                          ? `http://localhost:5000${recipe.image}`
-                          : recipe.image
-                      }
-                      alt={recipe.name}
-                      className="recipe-image"
-                    />
-                    <h3 className="recipe-title">{recipe.name}</h3>
-                  </div>
-                ))}
+              <div className="scroll-wrapper">
+                <button
+                  className="scroll-btn left"
+                  onClick={() =>
+                    document
+                      .getElementById(`scroll-${category}`)
+                      .scrollBy({ left: -300, behavior: "smooth" })
+                  }
+                >
+                  ⯇
+                </button>
+
+                <div
+                  id={`scroll-${category}`}
+                  className="category-recipes scrollable"
+                >
+                  {categoryRecipes.map((recipe) => (
+                    <div
+                      key={recipe.id}
+                      className="recipe-card"
+                      onClick={() => navigate(`/recipe/${recipe.id}`)}
+                    >
+                      <span
+                        className="veg-dot"
+                        style={{
+                          backgroundColor:
+                            recipe.type?.toLowerCase() === "veg"
+                              ? "green"
+                              : "red",
+                        }}
+                      ></span>
+
+                      <img
+                        src={
+                          recipe.image.startsWith("/uploads")
+                            ? `http://localhost:5000${recipe.image}`
+                            : recipe.image
+                        }
+                        alt={recipe.name}
+                        className="recipe-image"
+                      />
+                      <h3 className="recipe-title">{recipe.name}</h3>
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  className="scroll-btn right"
+                  onClick={() =>
+                    document
+                      .getElementById(`scroll-${category}`)
+                      .scrollBy({ left: 300, behavior: "smooth" })
+                  }
+                >
+                  ⯈
+                </button>
               </div>
             </div>
           );

@@ -10,7 +10,7 @@ const About = () => {
       <section className="about-section">
         <h2>About the Website</h2>
         <p>
-          <strong>Cooking With Ananya</strong> is your go-to destination for simple, delicious, and authentic Indian recipes.
+          <strong>Karavali Kitchen</strong> is your go-to destination for simple, delicious, and authentic Indian recipes.
           Whether you're a beginner or a seasoned cook, you'll find step-by-step recipes for every occasion.
         </p>
         <p>
@@ -28,7 +28,7 @@ const About = () => {
 
           <div>
             <p>
-              Hi! I’m <strong>Ananya R Shetty</strong>, the creator of Cooking With Ananya. I love experimenting with Indian flavors and sharing easy recipes anyone can follow.
+              Hi! I’m <strong>Ananya R Shetty</strong>, the creator of Karavali Kitchen. I love experimenting with Indian flavors and sharing easy recipes anyone can follow.
             </p>
             <p>
               I am an Information Science engineer by profession, which means I work with technology and problem-solving every day. However, cooking is my true passion and creative outlet. It brings me a way to express myself beyond the digital world. 

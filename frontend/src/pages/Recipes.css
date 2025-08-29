@@ -1,5 +1,27 @@
 /* src/pages/Recipes.css */
+.category-section {
+  margin-bottom: 40px;
+  position: relative;
+}
 
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.category-recipes.scrollable {
+  display: flex;
+  flex-wrap: nowrap;   /* crucial for single horizontal row */
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: none; /* Firefox */
+}
+.category-recipes.scrollable::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
 .recipes-page {
   padding: 40px 20px;
   background-color: #fdfdfd;

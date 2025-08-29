@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">Cooking With Ananya</Link>
+        <Link to="/">Karavali Kitchen</Link>
       </div>
 
       <ul className="nav-links">
@@ -51,7 +51,7 @@ const Navbar = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button type="submit">🔍</button>
+        <button type="submit"> 🔍</button>
       </form>
 
       {recipes.length > 0 && (
