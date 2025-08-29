@@ -1,4 +1,4 @@
-#  Ananya Recipes
+# Flavors of Coast
 
 A simple, full-stack recipe manager with searchable categories, visual veg/non-veg indicators, image uploads, and an admin area for adding and managing recipes.
 
@@ -101,6 +101,7 @@ Admin Panel: **http://localhost:5173/admin** (Add & manage recipes)
 
 
 
+<img width="1860" height="935" alt="image" src="https://github.com/user-attachments/assets/c53e6d50-9adb-4ce0-aa46-4b287b4ff4e1" />
 
 
 
