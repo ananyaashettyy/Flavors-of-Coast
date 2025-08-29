@@ -12,7 +12,7 @@ const Home = () => {
     <div className="home-container">
       <div className="hero">
         <div className="hero-text">
-          <h1>Karavali Kitchen</h1>
+          <h1>Flavors Of Coast</h1>
           <p>Your go-to hub for authentic Udupi–Mangalore recipes, curated with tradition and love.</p>
           <button className="hero-btn" onClick={() => navigate('/recipes')}>Explore Recipes</button>
         </div>

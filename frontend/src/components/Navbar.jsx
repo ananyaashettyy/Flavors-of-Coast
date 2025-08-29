@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">Karavali Kitchen</Link>
+        <Link to="/">Flavors Of Coast</Link>
       </div>
 
       <ul className="nav-links">

@@ -4,16 +4,16 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 const fsPromises = require("fs/promises");
-
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
 // Serve uploaded images
-const uploadDir = path.join(__dirname, "public/uploads");
-app.use("/uploads", express.static(uploadDir));
+app.use("/uploads", express.static(path.join(__dirname, "public/uploads")));
 
 // Ensure uploads folder exists
+const uploadDir = path.join(__dirname, "public/uploads");
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
@@ -37,8 +37,6 @@ try {
   console.error("Error reading recipes.json:", err);
 }
 
-// ------------------- API ROUTES -------------------
-
 // GET all recipes
 app.get("/api/recipes", (req, res) => {
   res.json(recipes);
@@ -48,20 +46,20 @@ app.get("/api/recipes", (req, res) => {
 app.post("/api/recipes", upload.single("image"), async (req, res) => {
   try {
     const { name, category, ingredients, steps, howToServe } = req.body;
-
     const newRecipe = {
       id: recipes.length + 1,
       name,
-      image: `/uploads/${req.file.filename}`,
+      image: `/uploads/${req.file.filename}`, // fixed line
       category,
-      ingredients: ingredients.split("\n").map((i) => i.trim()),
-      steps: steps.split("\n").map((s) => s.trim()),
-      howToServe,
+      ingredients: ingredients.split("\n").map(i => i.trim()),
+      steps: steps.split("\n").map(s => s.trim()),
+      howToServe
     };
-
     recipes.push(newRecipe);
-    await fsPromises.writeFile(recipesPath, JSON.stringify(recipes, null, 2));
-
+    await fsPromises.writeFile(
+      recipesPath,
+      JSON.stringify(recipes, null, 2)
+    );
     res.json({ message: "Recipe added", recipe: newRecipe });
   } catch (err) {
     console.error(err);
@@ -69,15 +67,5 @@ app.post("/api/recipes", upload.single("image"), async (req, res) => {
   }
 });
 
-// ------------------- SERVE REACT FRONTEND -------------------
-
-// Serve React build
-app.use(express.static(path.join(__dirname, "../frontend/build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
-});
-
-// ------------------- START SERVER -------------------
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Start server
+app.listen(5000, () => console.log("Server running on port 5000"));
