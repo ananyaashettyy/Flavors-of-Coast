@@ -35,10 +35,10 @@ A simple, full-stack recipe manager with searchable categories, visual veg/non-v
 
 ```bash
 
-git clone https://github.com/ananyaashettyy/ananya-recipes.git
+git clone https://github.com/ananyaashettyy/Flavors-of-Coast.git
 ```
 ```bash
-cd ananya-recipes
+cd Flavors-of-Coast
 ```
 
 ### 2️. Backend setup
